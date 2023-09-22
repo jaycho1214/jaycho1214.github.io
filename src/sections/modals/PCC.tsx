@@ -31,10 +31,10 @@ export function PCC() {
       <h3>Tech Stack</h3>
       <div className='grid grid-cols-3 md:grid-cols-5 items-center justify-center gap-2'>
         <Tag text='Python' />
-        <Tag text='Django' />
-        <Tag text='Slack' />
-        <Tag text='GCP App Engine' />
-        <Tag text='MySQL' />
+        <Tag text='Flask' />
+        <Tag text='BeautifulSoup4' />
+        <Tag text='Coveralls' />
+        <Tag text='Travis CI' />
       </div>
       <h3>Screenshot</h3>
       <img src='https://i.imgur.com/lkut6pn.gif' />
