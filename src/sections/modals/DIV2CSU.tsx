@@ -13,7 +13,19 @@ export function DIV2CSU() {
           icon='fa-solid fa-browser'
           disabled
         />
+        <IconLink
+          icon='fa-brands fa-github'
+          href='https://github.com/jaycho1214/DIV2CSU'
+        />
+        <IconLink
+          icon='fa-brands fa-github'
+          href='https://github.com/jaycho1214/DIV2CSUAPI'
+        />
       </div>
+      <h3>
+        Notice: We are planning use NextJS server actions instead of having a
+        separate api server for cost issues.
+      </h3>
       <h3>Background</h3>
       <p>
         You might be wondering what "DIV2CSU" stands for. DIV2CSU is an acronym
