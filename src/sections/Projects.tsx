@@ -43,12 +43,12 @@ export function Projects() {
         <Card
           title='MoLi'
           onClick={onClick('moli')}
-          src='https://d2rl869h53lu99.cloudfront.net/images/applications/moli/icon.png'
+          src='https://crosswand.com/_app/immutable/assets/icon.bf9d18f5.png'
         />
         <Card
           onClick={onClick('reflection')}
           title='Reflection'
-          src='https://d2rl869h53lu99.cloudfront.net/images/applications/reflection/icon.png'
+          src='https://crosswand.com/_app/immutable/assets/icon.d843aa81.png'
         />
         <Card
           onClick={onClick('div2csu')}
