@@ -10,38 +10,42 @@ export function DIV2CSU() {
       </div>
       <div className='flex flex-row items-center justify-start gap-2'>
         <IconLink
-          icon='fa-solid fa-browser'
+          icon='browser'
           disabled
         />
         <IconLink
-          icon='fa-brands fa-github'
+          icon='github'
           href='https://github.com/jaycho1214/DIV2CSU'
         />
         <IconLink
-          icon='fa-brands fa-github'
+          icon='github'
           href='https://github.com/jaycho1214/DIV2CSUAPI'
         />
       </div>
-      <h3>
-        Notice: We are planning use NextJS server actions instead of having a
-        separate api server for cost issues.
-      </h3>
+      <h3>Notice</h3>
+      <p>
+        To enhance maintainability, I merged the NextJS API Server with NextJS
+        Server Actions
+      </p>
       <h3>Background</h3>
       <p>
-        You might be wondering what "DIV2CSU" stands for. DIV2CSU is an acronym
-        for Division 2, Combat Support Unit, where I served in the military. The
-        military was the first place where I encountered challenges I'd never
-        faced before, especially concerning security. Due to these concerns,
-        everything was handled via paperwork. In the Korean army, we have
-        mandatory military service, which means we're required to stay on the
-        military base and cannot go home whenever we wish. Initially, we are
-        granted 24 days of vacation, but there are ways to earn additional days.
-        One such method is through merit points. You might think, "Is this like
-        school?" Indeed, we have a merit point system, where 48 points equate to
-        one day. However, there's a catch. Every time we earn a merit point, we
-        must fill out the same forms twice: one for the recipient and one for
-        the giver. I found this redundant. Therefore, I decided to create a
-        system where soldiers can record their points online.
+        "DIV2CSU" stands for Division 2, Combat Support Unit, where I served in
+        the military. This was the first place where I encountered unique
+        challenges, particularly concerning security. Due to these security
+        concerns, everything was handled via paperwork.
+        <br />
+        In the Korean army, mandatory military service requires us to stay on
+        the base, with limited vacation opportunities. Initially, soldiers are
+        granted 24 days of vacation, but additional days can be earned through a
+        merit point system. Each merit point earned translates to 48 points for
+        one additional vacation day. However, this system had a significant
+        drawback: every point earned required filling out identical forms
+        twice—one for the recipient and one for the giver. Moreover, these forms
+        were easily lost or torn, adding to the inefficiency.
+        <br />I found this process redundant and inefficient, so I developed an
+        online system where soldiers could record their merit points
+        electronically. This innovation streamlined the process, reducing
+        paperwork and improving efficiency for everyone involved.
       </p>
       <h3>Tech Stack (Website)</h3>
       <div className='grid grid-cols-3 md:grid-cols-5 items-center justify-center gap-2'>
@@ -52,7 +56,7 @@ export function DIV2CSU() {
         <Tag text='Vercel' />
         <Tag text='JWT' />
         <Tag text='Antd' />
-        <Tag text='Eslint' />
+        <Tag text='ESLint' />
       </div>
       <h3>Tech Stack (API)</h3>
       <div className='grid grid-cols-3 md:grid-cols-5 items-center justify-center gap-2'>
@@ -68,7 +72,7 @@ export function DIV2CSU() {
         <Tag text='AWS CodeDeploy' />
         <Tag text='AWS S3' />
         <Tag text='Github Actions' />
-        <Tag text='Eslint' />
+        <Tag text='ESLint' />
       </div>
       <h3>Screenshot</h3>
       <img src={Screenshot} />

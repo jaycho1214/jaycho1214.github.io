@@ -9,24 +9,28 @@ export function PCC() {
       </div>
       <div className='flex flex-row items-center justify-start gap-2'>
         <IconLink
-          icon='fa-brands fa-github'
+          icon='github'
           href='https://github.com/jaycho1214/pcc-bots'
         />
         <IconLink
-          icon='fa-brands fa-github'
+          icon='github'
           href='https://github.com/jaycho1214/pcc-preview'
         />
       </div>
       <h3>Background</h3>
       <p>
-        Before transferring to UCLA, I attended Pasadena City College. When I
-        first enrolled at Pasadena City College, my primary goal was to complete
-        my studies within a year and then transfer to another college. To
-        achieve this, I had to take all the required classes. Thus, I developed
-        an app that would automatically register for classes at the designated
-        times. I also discovered that our school website concealed the upcoming
-        semester's schedule and only made it available at specific times.
-        However, I found a way to access this data and shared it with my peers.
+        During my time at Pasadena City College, I embarked on a mission to
+        complete my studies within a year to transfer to UCLA. To achieve this
+        ambitious goal, I took a proactive approach by developing a unique website
+        that automated the class registration process. This website ensured I
+        could secure all required courses at the precise times they became
+        available. Additionally, I uncovered a hidden feature on the school's
+        website that revealed the upcoming semester's schedule at specific
+        intervals. By accessing and sharing this crucial information with my
+        peers, I facilitated better planning and course selection for many
+        students. This experience not only honed my technical skills but also
+        underscored my commitment to helping others achieve their academic
+        goals.
       </p>
       <h3>Tech Stack</h3>
       <div className='grid grid-cols-3 md:grid-cols-5 items-center justify-center gap-2'>

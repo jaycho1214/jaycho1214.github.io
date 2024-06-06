@@ -5,20 +5,20 @@ export function Reflection() {
     <article className='prose prose-invert prose-h2:mt-0 prose-h2:mb-0'>
       <div className='flex flex-row items-center'>
         <h2 className='mr-5'>Reflection</h2>
-        <Tag text='Mobile' />
+        <Tag text='Mobile App' />
       </div>
       <div className='flex flex-row items-center justify-start gap-2'>
         <IconLink
           href='https://crosswand.com/app/reflection'
-          icon='fa-solid fa-browser'
+          icon='browser'
         />
         <IconLink
           href='https://play.google.com/store/apps/details?id=com.crosswand.reflection'
-          icon='fa-brands fa-google-play'
+          icon='googleplay'
         />
         <IconLink
           href='https://apps.apple.com/app/reflection-note-reflections/id6443961419'
-          icon='fa-brands fa-apple'
+          icon='apple'
         />
       </div>
       <h3>Features</h3>
@@ -38,7 +38,7 @@ export function Reflection() {
         <Tag text='Styled Components' />
         <Tag text='Styled System' />
         <Tag text='Firebase' />
-        <Tag text='Eslint' />
+        <Tag text='ESLint' />
       </div>
     </article>
   );

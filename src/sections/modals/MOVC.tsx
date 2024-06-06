@@ -10,24 +10,31 @@ export function MOVC() {
       </div>
       <div className='flex flex-row items-center justify-start gap-2'>
         <IconLink
-          icon='fa-brands fa-github'
+          icon='github'
           href='https://github.com/jaycho1214/movc'
         />
       </div>
       <h3>Background</h3>
       <p>
-        Honestly, my dad owns this company. When he first founded his venture
-        capital firm, our excitement was palpable. Yet, the initial setup was
-        just the tip of the iceberg. Given our industry, we recognized the need
-        for startups to contact us effortlessly and without hesitation. However,
-        being new and relatively unknown meant we weren't even on the
-        map—literally. So, I took several initiatives to bolster our presence.
-        One key step was launching a website that not only showcases our
-        investment philosophy but also streamlines the process for startups to
-        reach out. They can simply fill out a form with their details, and like
-        magic, it's relayed to our Slack. Plus, the database is designed to
-        allow updates, like employee information, without any coding. This
-        ensures the site remains current, even in my absence.
+        When my dad first founded his venture capital firm, the excitement was
+        palpable, but we quickly realized that the initial setup was just the
+        beginning. In our industry, it was crucial for startups to contact us
+        effortlessly and without hesitation. However, being new and relatively
+        unknown posed a significant challenge—we weren't even on the map,
+        literally.
+        <br />
+        To address this, I took several key initiatives to bolster our presence.
+        A major step was launching a comprehensive website that not only
+        showcases our investment philosophy but also simplifies the outreach
+        process for startups. Through an easy-to-use form, startups can submit
+        their details, which are then automatically relayed to our Slack for
+        immediate attention.
+        <br />
+        Additionally, I designed the database to allow updates, such as changes
+        in employee information, without requiring any coding. This ensures the
+        site remains current and functional, even in my absence. These efforts
+        have significantly enhanced our visibility and accessibility, helping to
+        establish our firm as a notable player in the venture capital landscape.
       </p>
       <h3>Tech Stack</h3>
       <div className='grid grid-cols-3 md:grid-cols-5 items-center justify-center gap-2'>
