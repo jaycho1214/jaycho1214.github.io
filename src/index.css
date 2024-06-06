@@ -46,3 +46,8 @@
 .ReactModal__Overlay--before-close {
   opacity: 0;
 }
+
+nav {
+  mask: linear-gradient(black, black, transparent);
+  backdrop-filter: blur(8px);
+}
