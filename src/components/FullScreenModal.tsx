@@ -43,7 +43,7 @@ export function FullScreenModal({
       onRequestClose={onRequestClose}
     >
       <i
-        className='fa-solid fa-close p-3'
+        className='bi bi-x text-2xl'
         onClick={onRequestClose}
       />
       {children}
