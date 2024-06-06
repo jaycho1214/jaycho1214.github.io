@@ -18,8 +18,12 @@ export function Navbar() {
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.offsetHeight;
+      const offset = 100;
 
-      if (pos >= sectionTop - 50 && pos < sectionTop + sectionHeight - 50) {
+      if (
+        pos >= sectionTop - offset &&
+        pos < sectionTop + sectionHeight - offset
+      ) {
         setActive(section.id);
       }
     });
@@ -31,7 +35,7 @@ export function Navbar() {
   }, [handleScroll]);
 
   return (
-    <nav className='fixed top-0 left-0 right-0 z-50 bg-black'>
+    <nav className='fixed top-0 left-0 right-0 z-50'>
       <div className='max-w-screen-xl flex flex-wrap items-center md:justify-center justify-end mx-auto p-4'>
         <div className='flex items-center md:order-2'>
           <button
