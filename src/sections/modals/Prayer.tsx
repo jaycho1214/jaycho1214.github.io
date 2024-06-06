@@ -1,4 +1,3 @@
-import Screenshot from '../../assets/images/projects/screenshots/movc.png';
 import { IconLink, Tag } from '../../components';
 
 export function Prayer() {
