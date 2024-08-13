@@ -11,15 +11,15 @@
 	<section class="flex flex-col pt-12 scroll-mt-12 text-white px-4 sm:px-6">
 		<div class="py-4 flex flex-col">
 			<div class="flex">
-				<h1 class="text-2xl font-thin">Jaeyoung Cho</h1>
+				<h1 class="text-2xl font-light">Jaeyoung Cho</h1>
 				<div class="flex flex-row items-center ml-4">
 					<a href="https://github.com/jaycho1214" target="_blank">
 						<GithubIcon />
 					</a>
 				</div>
 			</div>
-			<p class="text-sm text-gray-300 font-thin">Software Engineer</p>
-			<p class="text-sm font-thin mt-6">I create things.</p>
+			<p class="text-sm text-gray-300 font-light">Software Engineer</p>
+			<p class="text-sm font-light mt-6">I create things.</p>
 		</div>
 		<div class="my-8 border border-px border-gray-600">
 			<h1 class="absolute bg-black mx-3 -my-3 px-4 font-bold">Projects</h1>
