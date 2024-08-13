@@ -2,7 +2,8 @@
 	import { onMount } from 'svelte';
 
 	let text = '';
-	let showSplash = true; // State variable to manage the splash visibility
+	let showSplash: boolean | null = null;
+	let doneAnimation = false;
 
 	const targetText = 'Jaeyoung Cho';
 	function textAnimation(idx: number = 0) {
@@ -23,22 +24,30 @@
 	}
 
 	onMount(async () => {
-		await textAnimation();
-		await new Promise((resolve) => setTimeout(resolve, 1000));
-		showSplash = false; // Hide splash after animation completes
+		showSplash = sessionStorage.getItem('splashShown') === 'false'; // State variable to manage the splash visibility
+		if (!showSplash) {
+			await textAnimation();
+			await new Promise((resolve) => setTimeout(resolve, 1000));
+			sessionStorage.setItem('splashShown', 'false');
+		}
+		doneAnimation = true;
 	});
 </script>
 
-<section
-	id="splash"
-	class="fixed inset-0 bg-black pointer-events-none cursor-default z-50"
-	class:slide-up={!showSplash}
->
-	<div class="flex w-full h-full justify-center items-center">
-		<p class="text-white text-2xl">{text}</p>
-		<p class="blink text-white text-2xl">_</p>
-	</div>
-</section>
+{#if showSplash === false}
+	<section
+		id="splash"
+		class="fixed inset-0 bg-black pointer-events-none cursor-default z-50"
+		class:slide-up={doneAnimation}
+	>
+		<div class="flex w-full h-full justify-center items-center">
+			<p class="text-white text-2xl">{text}</p>
+			<p class="blink text-white text-2xl">_</p>
+		</div>
+	</section>
+{:else if showSplash === null}
+	<div class="fixed inset-0 bg-black pointer-events-none cursor-default z-50" />
+{/if}
 
 <svelte:window
 	on:wheel|nonpassive={(event) => {
