@@ -16,7 +16,9 @@
 		alt="Thumbnail"
 		class="absolute object-cover w-full h-full z-0 pointer-events-none"
 	/>
-	<div class="absolute h-full p-4 flex flex-col justify-between z-10 pointer-events-none">
+	<div
+		class="absolute h-full p-4 flex flex-col justify-between z-10 pointer-events-none"
+	>
 		<p class="font-bold text-sm">{category}</p>
 		<p class="text-xl">{title}</p>
 	</div>

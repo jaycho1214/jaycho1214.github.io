@@ -2,7 +2,12 @@
 	export let expanded: boolean = false;
 </script>
 
-<div class="menu-icon" id="menu-icon" class:open={expanded} style="--size : 20px">
+<div
+	class="menu-icon"
+	id="menu-icon"
+	class:open={expanded}
+	style="--size : 20px"
+>
 	<div class="menu-line line1"></div>
 	<div class="menu-line line2"></div>
 </div>
