@@ -5,7 +5,7 @@
 
 {#if $isNavOpened}
 	<div
-		class="fixed inset-0 bg-black z-50 mt-12 opacity-90"
+		class="fixed inset-0 bg-black z-40 opacity-90"
 		transition:fade={{ duration: 300 }}
 	/>
 	<div
