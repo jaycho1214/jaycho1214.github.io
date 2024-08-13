@@ -10,8 +10,9 @@ body {
 
 	background-color: black;
 }
+
 @media (hover: hover) and (pointer: fine) {
-  .hover\:underline:hover {
-    text-decoration-line: underline;
-  }
+	.hover\:underline:hover {
+		text-decoration-line: underline;
+	}
 }
