@@ -8,7 +8,7 @@
 </script>
 
 <article>
-	<section class="flex flex-col pt-12 scroll-mt-12 text-white px-4 sm:px-6">
+	<section class="flex flex-col pt-12 pb-20 text-white px-4 sm:px-6">
 		<div class="py-4 flex flex-col">
 			<div class="flex">
 				<h1 class="text-2xl font-light">Jaeyoung Cho</h1>
