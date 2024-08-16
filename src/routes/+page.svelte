@@ -5,8 +5,6 @@
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 
 	const hideSplahPage = false;
-
-	export const prerender = true;
 </script>
 
 <article>
