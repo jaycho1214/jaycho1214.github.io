@@ -4,7 +4,7 @@
 	import GithubIcon from '$lib/components/icons/GithubIcon.svelte';
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 
-	const hideSplahPage = false;
+	const hideSplahPage = process.env.NODE_ENV === 'DEBUG';
 </script>
 
 <article>
