@@ -17,21 +17,22 @@
 		<meta property="og:locale" content="en_US" />
 		<title>Jaeyoung Cho</title>
 		%sveltekit.head%
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-J3472EMQPD"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-J3472EMQPD');
+		</script>
 	</head>
 	<body>
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
-	<script
-		async
-		src="https://www.googletagmanager.com/gtag/js?id=G-J3472EMQPD"
-	></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-
-		gtag('config', 'G-J3472EMQPD');
-	</script>
 </html>
