@@ -25,7 +25,10 @@
 
 	onMount(async () => {
 		showSplash = sessionStorage.getItem('splashShown') === 'false'; // State variable to manage the splash visibility
+		// text = '';
+		// showSplash = false;
 		if (!showSplash) {
+			await new Promise((resolve) => setTimeout(resolve, 100));
 			await textAnimation();
 			await new Promise((resolve) => setTimeout(resolve, 1000));
 			sessionStorage.setItem('splashShown', 'false');
