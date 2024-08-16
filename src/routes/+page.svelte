@@ -13,7 +13,11 @@
 			<div class="flex">
 				<h1 class="text-2xl font-light">Jaeyoung Cho</h1>
 				<div class="flex flex-row items-center ml-4">
-					<a href="https://github.com/jaycho1214" target="_blank">
+					<a
+						href="https://github.com/jaycho1214"
+						target="_blank"
+						aria-label="Visit my Github account"
+					>
 						<GithubIcon />
 					</a>
 				</div>
