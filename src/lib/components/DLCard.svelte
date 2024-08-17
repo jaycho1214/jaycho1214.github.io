@@ -4,11 +4,12 @@
 	export let title: string = '';
 	export let href: string = '';
 	export let textColor: string = '';
+	export let className: string = '';
 </script>
 
 <a
 	{href}
-	class="relative text-white rounded inline-block overflow-hidden"
+	class={`relative text-white rounded inline-block overflow-hidden ${className} w-full h-full`}
 	style={`color: ${textColor}`}
 >
 	<img
@@ -25,10 +26,6 @@
 </a>
 
 <style>
-	a {
-		aspect-ratio: 1/1.618;
-	}
-
 	a:hover img {
 		transform: scale(110%);
 		transition: all;
