@@ -1,5 +1,5 @@
 <script>
-	import GithubReadmeTemplate from '$lib/templates/GithubREADMETemplate.svelte';
+	import MarkdownTemplate from '$lib/templates/MarkdownTemplate.svelte';
 </script>
 
-<GithubReadmeTemplate repo="jaycho1214/dl-playground" subfolder="xor" />
+<MarkdownTemplate repo="jaycho1214/dl-playground" subfolder="xor" />
