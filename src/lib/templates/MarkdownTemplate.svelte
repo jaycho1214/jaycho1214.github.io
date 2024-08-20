@@ -34,7 +34,10 @@
 		const html = md.use(footnote).use(mk).render(text);
 		document.getElementsByTagName('article')[0].innerHTML = html;
 		document.querySelectorAll('img').forEach((block) => {
-			block.src = GITHUB_ASSET_URL + block.getAttribute('src');
+			const src = block.getAttribute('src');
+			if (src?.startsWith('/')) {
+				block.src = GITHUB_ASSET_URL + block.getAttribute('src');
+			}
 		});
 		hljs.highlightAll();
 		loading = false;
