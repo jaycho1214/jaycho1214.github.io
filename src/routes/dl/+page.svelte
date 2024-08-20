@@ -88,6 +88,10 @@
 	</div>
 </div>
 
+<svelte:head>
+	<title>Deep Learning</title>
+</svelte:head>
+
 <style>
 	.active {
 		color: #fff;
