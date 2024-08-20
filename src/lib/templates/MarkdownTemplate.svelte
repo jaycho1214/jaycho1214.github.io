@@ -8,6 +8,7 @@
 	import GithubIcon from '$lib/components/icons/GithubIcon.svelte';
 	import { fade } from 'svelte/transition';
 
+	export let text: string | null = null;
 	export let href: string | null = null;
 	export let repo: string | null = null;
 	export let subfolder: string | null = null;
@@ -18,25 +19,30 @@
 	const README_URL = `https://raw.githubusercontent.com/${repo}/main/${subfolder}/README.md`;
 
 	onMount(async () => {
-		const resp = await fetch(href != null ? href : README_URL);
-		if (resp.status !== 200) {
-			return;
+		if (text == null) {
+			const resp = await fetch(href != null ? href : README_URL);
+			if (resp.status !== 200) {
+				return;
+			}
+			text = await resp.text();
 		}
-		const text = await resp.text();
 		// https://showdownjs.com/docs/available-options/
 		const md = new MarkdownIt({
 			html: true,
 		});
-		md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
-			tokens[idx].attrSet('target', '_blank');
-			return self.renderToken(tokens, idx, options);
-		};
 		const html = md.use(footnote).use(mk).render(text);
 		document.getElementsByTagName('article')[0].innerHTML = html;
+		document.querySelectorAll('a').forEach((block) => {
+			if (block.getAttribute('href')?.startsWith('http')) {
+				block.setAttribute('target', '_blank');
+			}
+		});
 		document.querySelectorAll('img').forEach((block) => {
 			const src = block.getAttribute('src');
 			if (src?.startsWith('/')) {
-				block.src = GITHUB_ASSET_URL + block.getAttribute('src');
+				if (repo != null) {
+					block.src = GITHUB_ASSET_URL + block.getAttribute('src');
+				}
 			}
 		});
 		hljs.highlightAll();
