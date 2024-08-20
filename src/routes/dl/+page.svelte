@@ -17,9 +17,10 @@
 		{
 			href: '/dl/xor',
 			imgSrc: 'https://i.giphy.com/3og0IC3JCOCPBysB0c.webp',
-			category: 'Multi-layer Perceptron',
+			category: 'Feedforward Neural Network',
 			title: 'XOR',
 			textColor: '#000',
+			tag: 'Experiment',
 		},
 		{
 			href: '/dl/dinosaur',
@@ -27,7 +28,7 @@
 			category: 'Reinforcement Learning',
 			title: 'Dinosaur',
 			textColor: '#000',
-			tag: 'RL',
+			tag: 'Experiment',
 		},
 	]);
 
