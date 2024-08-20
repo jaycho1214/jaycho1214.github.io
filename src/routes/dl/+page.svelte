@@ -62,9 +62,9 @@
 
 <div class="flex flex-col justify-center py-12 px-6">
 	<div class="flex flex-row gap-4 mt-4 mb-8">
-		{#each ['All', ...$data
+		{#each new Set(['All', ...$data
 				.map(({ tag }) => tag)
-				.filter((tag) => tag != null)] as tag}
+				.filter((tag) => tag != null)]) as tag}
 			<button
 				class="rounded-full border px-4 py-1 border-px border-gray-700 text-gray-400 font-light text-sm hover:bg-gray-700 transition"
 				on:click={onFilterClick(tag)}
