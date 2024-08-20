@@ -6,6 +6,15 @@
 
 	const data = readable([
 		{
+			href: '/dl/resnet',
+			category: 'Convolutional Neural Network',
+			title: 'ResNet',
+			textColor: '#000',
+			tag: 'Paper',
+			backgroundStyle:
+				'background: linear-gradient(to bottom, rgb(198, 255, 221), rgb(251, 215, 134), rgb(247, 121, 125));',
+		},
+		{
 			href: '/dl/xor',
 			imgSrc: 'https://i.giphy.com/3og0IC3JCOCPBysB0c.webp',
 			category: 'Multi-layer Perceptron',
