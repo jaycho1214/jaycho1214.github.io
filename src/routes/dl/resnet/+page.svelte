@@ -1,8 +1,8 @@
 <script>
-	import MarkdownTemplate from '$lib/templates/MarkdownTemplate.svelte';
+	import Markdown from '$lib/templates/Markdown.svelte';
 </script>
 
-<MarkdownTemplate href="/docs/resnet/index.md" />
+<Markdown source={{ url: '/docs/resnet/index.md' }} />
 
 <svelte:head>
 	<title>Deep Residual Learning for Image Recognition</title>

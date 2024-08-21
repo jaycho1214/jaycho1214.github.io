@@ -8,19 +8,25 @@
 	import GithubIcon from '$lib/components/icons/GithubIcon.svelte';
 	import { fade } from 'svelte/transition';
 
-	export let text: string | null = null;
-	export let href: string | null = null;
-	export let repo: string | null = null;
-	export let subfolder: string | null = null;
-	let loading = true;
+	export let source: {
+		text?: string;
+		url?: string;
+		github?: {
+			repo: string;
+			folder: string;
+		};
+	} = {};
 
-	const GITHUB_URL = `https://github.com/${repo}/blob/main/${subfolder}`;
-	const GITHUB_ASSET_URL = `https://raw.githubusercontent.com/${repo}/main`;
-	const README_URL = `https://raw.githubusercontent.com/${repo}/main/${subfolder}/README.md`;
+	let loading = true;
+	let text = '';
+
+	const GITHUB_URL = `https://github.com/${source.github?.repo}/blob/main/${source.github?.folder}`;
+	const GITHUB_ASSET_URL = `https://raw.githubusercontent.com/${source.github?.repo}/main`;
+	const README_URL = `https://raw.githubusercontent.com/${source.github?.repo}/main/${source.github?.folder}/README.md`;
 
 	onMount(async () => {
-		if (text == null) {
-			const resp = await fetch(href != null ? href : README_URL);
+		if (source.text == null) {
+			const resp = await fetch(source.url != null ? source.url : README_URL);
 			if (resp.status !== 200) {
 				return;
 			}
@@ -40,7 +46,7 @@
 		document.querySelectorAll('img').forEach((block) => {
 			const src = block.getAttribute('src');
 			if (src?.startsWith('/')) {
-				if (repo != null) {
+				if (source.github?.repo != null) {
 					block.src = GITHUB_ASSET_URL + block.getAttribute('src');
 				}
 			}
@@ -74,7 +80,7 @@
 <article
 	class="prose prose-invert mx-auto max-w-2xl mt-12 mb-20 py-6 px-4"
 ></article>
-{#if repo != null}
+{#if source.github?.repo != null}
 	<a
 		class="fixed right-10 bottom-10 bg-gray-800 p-2 rounded-full transition hover:bg-gray-500 m-auto"
 		href={GITHUB_URL}

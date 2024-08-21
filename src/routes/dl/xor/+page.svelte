@@ -1,8 +1,10 @@
 <script>
-	import MarkdownTemplate from '$lib/templates/MarkdownTemplate.svelte';
+	import Markdown from '$lib/templates/Markdown.svelte';
 </script>
 
-<MarkdownTemplate repo="jaycho1214/dl-playground" subfolder="xor" />
+<Markdown
+	source={{ github: { repo: 'jaycho1214/dl-playground', folder: 'xor' } }}
+/>
 
 <svelte:head>
 	<title>XOR</title>
