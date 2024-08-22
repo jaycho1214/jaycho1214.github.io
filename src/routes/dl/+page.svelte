@@ -6,10 +6,17 @@
 
 	const data = readable([
 		{
+			href: '/dl/cifar10-gan',
+			category: 'Generative Adversarial Network',
+			imgSrc:
+				'https://storage.googleapis.com/tfds-data/visualization/fig/cifar10-3.0.2.png',
+			title: 'CIFAR-10 GAN',
+			tag: 'Experiment',
+		},
+		{
 			href: '/dl/resnet',
 			category: 'Convolutional Neural Network',
 			title: 'ResNet',
-			textColor: '#000',
 			tag: 'Paper',
 			backgroundStyle:
 				'background: linear-gradient(to bottom, rgb(198, 255, 221), rgb(251, 215, 134), rgb(247, 121, 125));',
