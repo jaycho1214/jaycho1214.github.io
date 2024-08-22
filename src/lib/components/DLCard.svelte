@@ -25,7 +25,7 @@
 		id="content"
 		class="absolute h-full p-4 flex flex-col justify-between z-10 pointer-events-none"
 	>
-		<p class="font-bold text-sm">{category}</p>
+		<p class="font-bold text-xs">{category}</p>
 		<p class="text-xl">{title}</p>
 	</div>
 </a>
@@ -39,13 +39,13 @@
 	}
 	a:hover {
 		color: white;
-		transition: all;
-		transition-duration: 400ms;
 	}
 	a {
 		color: black;
-		transform: scale(100%);
 		transition: all;
 		transition-duration: 400ms;
+	}
+	img {
+		object-fit: cover;
 	}
 </style>
