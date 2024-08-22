@@ -26,7 +26,6 @@
 			imgSrc: 'https://i.giphy.com/3og0IC3JCOCPBysB0c.webp',
 			category: 'Feedforward Neural Network',
 			title: 'XOR',
-			textColor: '#000',
 			tag: 'Experiment',
 		},
 		{
@@ -34,7 +33,6 @@
 			imgSrc: 'https://i.giphy.com/J2xMuBFMLH0SOYdZP1.webp',
 			category: 'Reinforcement Learning',
 			title: 'Dinosaur',
-			textColor: '#000',
 			tag: 'Experiment',
 		},
 	]);
