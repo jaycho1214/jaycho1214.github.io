@@ -30,6 +30,12 @@
 			<div class="flex flex-col gap-8 px-4 sm:px-8 py-12">
 				<ProjectCard
 					category="Application"
+					url="https://github.com/jaycho1214/chatapi-app"
+					name="ChatAPI"
+					description="Pay-as-you-go Mobile ChatGPT"
+				/>
+				<ProjectCard
+					category="Application"
 					url="https://apps.apple.com/app/id6503010302"
 					name="Bible"
 					description="A Bible app with multiple translations on one screen, made for Apple Vision Pro."
