@@ -54,7 +54,7 @@
 
 <svelte:window
 	on:wheel|nonpassive={(event) => {
-		if (showSplash) {
+		if (!showSplash && !doneAnimation) {
 			event.preventDefault();
 		}
 	}}
