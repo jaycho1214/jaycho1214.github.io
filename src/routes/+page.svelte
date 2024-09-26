@@ -29,6 +29,12 @@
 			<h1 class="absolute bg-black mx-3 -my-3 px-4 font-bold">Projects</h1>
 			<div class="flex flex-col gap-8 px-4 sm:px-8 py-12">
 				<ProjectCard
+					category="Web"
+					url="https://www.onlineutilities.org"
+					name="OnlineUtilities"
+					description="Simplify your day with powerful tools in a sleek design."
+				/>
+				<ProjectCard
 					category="Application"
 					url="https://github.com/jaycho1214/chatapi-app"
 					name="ChatAPI"
