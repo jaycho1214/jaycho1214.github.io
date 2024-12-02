@@ -30,6 +30,12 @@
 			<div class="flex flex-col gap-8 px-4 sm:px-8 py-12">
 				<ProjectCard
 					category="Web"
+					url="https://shovel.one"
+					name="Shovel"
+					description="Create and manage fictional worlds through web novels."
+				/>
+				<ProjectCard
+					category="Web"
 					url="https://www.onlineutilities.org"
 					name="OnlineUtilities"
 					description="Simplify your day with powerful tools in a sleek design."
