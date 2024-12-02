@@ -8,17 +8,21 @@
 	import GithubIcon from '$lib/components/icons/GithubIcon.svelte';
 	import { fade } from 'svelte/transition';
 
-	export let source: {
-		text?: string;
-		url?: string;
-		github?: {
-			repo: string;
-			folder: string;
+	let {
+		source = {},
+	}: {
+		source: {
+			text?: string;
+			url?: string;
+			github?: {
+				repo: string;
+				folder: string;
+			};
 		};
-	} = {};
+	} = $props();
 
-	let loading = true;
-	let text = '';
+	let loading = $state(true);
+	let text = $state('');
 
 	const GITHUB_URL = `https://github.com/${source.github?.repo}/blob/main/${source.github?.folder}`;
 	const GITHUB_ASSET_URL = `https://raw.githubusercontent.com/${source.github?.repo}/main`;
@@ -64,15 +68,17 @@
 		<div
 			class="flex flex-col items-center mx-auto max-w-2xl my-20 px-4 py-5 gap-8"
 		>
-			<div class="bg-slate-200 w-32 h-3 rounded-full animate-pulse" />
-			<div class="bg-slate-200 w-full h-9 rounded-full animate-pulse" />
-			<div class="bg-slate-200 w-full aspect-video rounded-lg animate-pulse" />
+			<div class="bg-slate-200 w-32 h-3 rounded-full animate-pulse"></div>
+			<div class="bg-slate-200 w-full h-9 rounded-full animate-pulse"></div>
+			<div
+				class="bg-slate-200 w-full aspect-video rounded-lg animate-pulse"
+			></div>
 			<div class="flex flex-col gap-4 w-full">
-				<div class="bg-slate-200 w-full h-3 rounded-full animate-pulse" />
-				<div class="bg-slate-200 w-full h-3 rounded-full animate-pulse" />
-				<div class="bg-slate-200 w-full h-3 rounded-full animate-pulse" />
-				<div class="bg-slate-200 w-full h-3 rounded-full animate-pulse" />
-				<div class="bg-slate-200 w-1/2 h-3 rounded-full animate-pulse" />
+				<div class="bg-slate-200 w-full h-3 rounded-full animate-pulse"></div>
+				<div class="bg-slate-200 w-full h-3 rounded-full animate-pulse"></div>
+				<div class="bg-slate-200 w-full h-3 rounded-full animate-pulse"></div>
+				<div class="bg-slate-200 w-full h-3 rounded-full animate-pulse"></div>
+				<div class="bg-slate-200 w-1/2 h-3 rounded-full animate-pulse"></div>
 			</div>
 		</div>
 	</div>

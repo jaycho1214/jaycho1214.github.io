@@ -1,8 +1,15 @@
 <script lang="ts">
-	export let url: string;
-	export let category: string;
-	export let name: string;
-	export let description: string;
+	let {
+		url,
+		category,
+		name,
+		description,
+	}: {
+		url: string;
+		category: string;
+		name: string;
+		description: string;
+	} = $props();
 </script>
 
 <a class="inline-block group self-start" href={url} target="_blank">

@@ -1,10 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	let text = '';
-	let showSplash: boolean | null = null;
-	let doneAnimation = false;
-
+	let showSplash: boolean | null = $state(false);
+	let doneAnimation = $state(false);
+	let text = $state('');
 	const targetText = 'Jaeyoung Cho';
 	function textAnimation(idx: number = 0) {
 		return new Promise<void>((resolve) => {
@@ -25,8 +24,6 @@
 
 	onMount(async () => {
 		showSplash = sessionStorage.getItem('splashShown') === 'false'; // State variable to manage the splash visibility
-		// text = '';
-		// showSplash = false;
 		if (!showSplash) {
 			await new Promise((resolve) => setTimeout(resolve, 100));
 			await textAnimation();
@@ -49,7 +46,9 @@
 		</div>
 	</section>
 {:else if showSplash === null}
-	<div class="fixed inset-0 bg-black pointer-events-none cursor-default z-50" />
+	<div
+		class="fixed inset-0 bg-black pointer-events-none cursor-default z-50"
+	></div>
 {/if}
 
 <svelte:window

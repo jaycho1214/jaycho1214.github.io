@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let expanded: boolean = false;
+	let { expanded = $bindable(false) }: { expanded: boolean } = $props();
 </script>
 
 <div

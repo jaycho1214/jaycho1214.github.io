@@ -7,7 +7,7 @@
 	<div
 		class="fixed inset-0 bg-black z-40 opacity-90"
 		transition:fade={{ duration: 300 }}
-	/>
+	></div>
 	<div
 		class="fixed inset-0 text-gray-400 font-light bg-blue p-4 text-3xl mt-12 z-50"
 		transition:fade={{ duration: 300 }}

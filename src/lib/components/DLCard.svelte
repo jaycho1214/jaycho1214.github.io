@@ -1,10 +1,19 @@
 <script lang="ts">
-	export let imgSrc: string | null = null;
-	export let category: string = '';
-	export let title: string = '';
-	export let href: string = '';
-	export let className: string = '';
-	export let backgroundStyle: string | null = null;
+	let {
+		imgSrc,
+		category,
+		title,
+		href,
+		className,
+		backgroundStyle,
+	}: {
+		imgSrc?: string | null;
+		category: string;
+		title: string;
+		href: string;
+		className?: string;
+		backgroundStyle?: string | null;
+	} = $props();
 </script>
 
 <a
@@ -12,7 +21,7 @@
 	class={`relative text-white rounded inline-block overflow-hidden ${className} w-full h-full`}
 >
 	{#if backgroundStyle}
-		<div id="background" style={backgroundStyle} class="absolute inset-0" />
+		<div id="background" style={backgroundStyle} class="absolute inset-0"></div>
 	{/if}
 	{#if imgSrc}
 		<img
