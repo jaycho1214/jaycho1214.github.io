@@ -2,15 +2,21 @@
 	import Menu from '$lib/components/Menu.svelte';
 	import NavBar from '$lib/components/NavBar.svelte';
 	import { navigating } from '$app/stores';
-	import { isNavOpened } from '$lib/stores/nav-store';
+	import { navStore } from '$lib/stores/nav-store.svelte';
 	import '../app.css';
+	import type { Snippet } from 'svelte';
 
-	$: if ($navigating) isNavOpened.set(false);
+	let { children }: { children: Snippet } = $props();
+
+	$effect(() => {
+		if ($navigating) navStore.close();
+	});
+
 	const DEBUG = process.env.NODE_ENV === 'DEBUG';
 </script>
 
 <NavBar />
-<slot />
+{@render children()}
 <Menu />
 
 <svelte:head>

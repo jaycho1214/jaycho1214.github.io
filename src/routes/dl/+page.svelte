@@ -1,10 +1,9 @@
 <script lang="ts">
 	import DLCard from '$lib/components/DLCard.svelte';
-	import { derived, readable, writable } from 'svelte/store';
 	import { crossfade } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 
-	const data = readable([
+	const data = [
 		{
 			href: '/dl/cifar10-gan',
 			category: 'Generative Adversarial Network',
@@ -35,18 +34,15 @@
 			title: 'Dinosaur',
 			tag: 'Experiment',
 		},
-	]);
+	];
 
-	const filter = writable({ tag: 'All' });
+	let filter = $state({ tag: 'All' });
 
-	const filtered = derived([data, filter], ([$data, $filter]) => {
-		if ($filter.tag === 'All') return $data;
-		return $data.filter((item) => item.tag === $filter.tag);
-	});
-
-	const onFilterClick = (tag: string) => () => {
-		filter.set({ tag });
-	};
+	let filtered = $derived(
+		filter.tag === 'All'
+			? data
+			: data.filter((item) => item.tag === filter.tag),
+	);
 
 	const [send, receive] = crossfade({
 		fallback(node) {
@@ -67,13 +63,13 @@
 
 <div class="flex flex-col justify-center py-12 px-6">
 	<div class="flex flex-row gap-4 mt-4 mb-8">
-		{#each new Set(['All', ...$data
+		{#each new Set(['All', ...data
 				.map(({ tag }) => tag)
-				.filter((tag) => tag != null)]) as tag}
+				.filter((tag) => tag != null)]) as tag (tag)}
 			<button
 				class="rounded-full border px-4 py-1 border-px border-gray-700 text-gray-400 font-light text-sm hover:bg-gray-700 transition"
-				on:click={onFilterClick(tag)}
-				class:active={$filter.tag === tag}
+				onclick={() => (filter = { tag })}
+				class:active={filter.tag === tag}
 				>{tag}
 			</button>
 		{/each}
@@ -81,7 +77,7 @@
 	<div
 		class="max-w-screen-xl grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 transition"
 	>
-		{#each $filtered as item}
+		{#each filtered as item (item.href)}
 			<div
 				class="card"
 				in:receive={{ key: item.href }}

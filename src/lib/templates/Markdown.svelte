@@ -24,9 +24,15 @@
 	let loading = $state(true);
 	let text = $state('');
 
-	const GITHUB_URL = `https://github.com/${source.github?.repo}/blob/main/${source.github?.folder}`;
-	const GITHUB_ASSET_URL = `https://raw.githubusercontent.com/${source.github?.repo}/main`;
-	const README_URL = `https://raw.githubusercontent.com/${source.github?.repo}/main/${source.github?.folder}/README.md`;
+	let GITHUB_URL = $derived(
+		`https://github.com/${source.github?.repo}/blob/main/${source.github?.folder}`,
+	);
+	let GITHUB_ASSET_URL = $derived(
+		`https://raw.githubusercontent.com/${source.github?.repo}/main`,
+	);
+	let README_URL = $derived(
+		`https://raw.githubusercontent.com/${source.github?.repo}/main/${source.github?.folder}/README.md`,
+	);
 
 	onMount(async () => {
 		if (source.text == null) {

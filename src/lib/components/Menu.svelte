@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import { fade } from 'svelte/transition';
-	import { isNavOpened } from '$lib/stores/nav-store';
+	import { navStore } from '$lib/stores/nav-store.svelte';
 </script>
 
-{#if $isNavOpened}
+{#if navStore.opened}
 	<div
 		class="fixed inset-0 bg-black z-40 opacity-90"
 		transition:fade={{ duration: 300 }}

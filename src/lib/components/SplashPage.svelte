@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { on } from 'svelte/events';
 
 	let showSplash: boolean | null = $state(false);
 	let doneAnimation = $state(false);
@@ -23,7 +24,7 @@
 	}
 
 	onMount(async () => {
-		showSplash = sessionStorage.getItem('splashShown') === 'false'; // State variable to manage the splash visibility
+		showSplash = sessionStorage.getItem('splashShown') === 'false';
 		if (!showSplash) {
 			await new Promise((resolve) => setTimeout(resolve, 100));
 			await textAnimation();
@@ -31,6 +32,19 @@
 			sessionStorage.setItem('splashShown', 'false');
 		}
 		doneAnimation = true;
+	});
+
+	$effect(() => {
+		return on(
+			window,
+			'wheel',
+			(event) => {
+				if (!showSplash && !doneAnimation) {
+					event.preventDefault();
+				}
+			},
+			{ passive: false },
+		);
 	});
 </script>
 
@@ -50,14 +64,6 @@
 		class="fixed inset-0 bg-black pointer-events-none cursor-default z-50"
 	></div>
 {/if}
-
-<svelte:window
-	on:wheel|nonpassive={(event) => {
-		if (!showSplash && !doneAnimation) {
-			event.preventDefault();
-		}
-	}}
-/>
 
 <style>
 	#splash {

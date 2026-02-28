@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Markdown from '$lib/templates/Markdown.svelte';
 </script>
 

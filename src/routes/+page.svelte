@@ -4,7 +4,7 @@
 	import GithubIcon from '$lib/components/icons/GithubIcon.svelte';
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 
-	const hideSplahPage = process.env.NODE_ENV === 'DEBUG';
+	const hideSplashPage = process.env.NODE_ENV === 'DEBUG';
 </script>
 
 <article>
@@ -81,11 +81,11 @@
 	</section>
 </article>
 
-{#if !hideSplahPage}
+{#if !hideSplashPage}
 	<SplashPage />
 {/if}
 
-<style lang="postcss">
+<style>
 	article {
 		scroll-behavior: smooth;
 		overflow-y: scroll;

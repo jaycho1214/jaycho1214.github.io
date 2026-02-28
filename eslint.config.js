@@ -22,6 +22,9 @@ export default [
 				},
 			},
 		},
+		rules: {
+			'svelte/no-navigation-without-resolve': 'off',
+		},
 	},
 	{
 		languageOptions: {
@@ -32,6 +35,6 @@ export default [
 		},
 	},
 	{
-		ignores: ['build/', '.svelte-kit/', 'dist/', 'tailwind.config.js'],
+		ignores: ['build/', '.svelte-kit/', 'dist/'],
 	},
 ];
