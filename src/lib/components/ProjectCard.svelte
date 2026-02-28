@@ -12,7 +12,12 @@
 	} = $props();
 </script>
 
-<a class="inline-block group self-start" href={url} target="_blank">
+<a
+	class="inline-block group self-start"
+	class:pointer-events-none={!url}
+	href={url || undefined}
+	target="_blank"
+>
 	<p class="text-xs text-gray-300 group-hover:text-gray-500 transition">
 		{category}
 	</p>
