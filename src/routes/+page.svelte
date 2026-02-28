@@ -37,7 +37,7 @@
 					/>
 					<ProjectCard
 						category="Application"
-						url=""
+						url="/apps/kipi"
 						name="Kipi"
 						description="A social diary app for exchanging stories, whether as yourself or anonymously."
 					/>

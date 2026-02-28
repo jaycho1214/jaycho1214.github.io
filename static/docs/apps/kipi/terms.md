@@ -128,4 +128,4 @@ We may update these Terms from time to time. We will notify you of material chan
 
 If you have questions about these Terms, please contact us at:
 
-**Email:** jaycho1214@gmail.com
+**Contact Form:** [Submit a request](https://forms.gle/LYaCC9JNb77Ka5cc9)

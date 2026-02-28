@@ -16,7 +16,7 @@
 	class="inline-block group self-start"
 	class:pointer-events-none={!url}
 	href={url || undefined}
-	target="_blank"
+	target={url?.startsWith('/') ? undefined : '_blank'}
 >
 	<p class="text-xs text-gray-300 group-hover:text-gray-500 transition">
 		{category}

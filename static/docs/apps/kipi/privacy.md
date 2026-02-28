@@ -138,4 +138,4 @@ We may update this Privacy Policy from time to time. We will notify you of mater
 
 If you have questions about this Privacy Policy, please contact us at:
 
-**Email:** jaycho1214@gmail.com
+**Contact Form:** [Submit a request](https://forms.gle/LYaCC9JNb77Ka5cc9)
