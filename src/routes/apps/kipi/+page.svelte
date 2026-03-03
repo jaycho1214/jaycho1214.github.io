@@ -204,6 +204,8 @@
 		<a href="/apps/kipi/legal/privacy">Privacy Policy</a>
 		<span class="legal-dot"></span>
 		<a href="/apps/kipi/legal/terms">Terms of Service</a>
+		<span class="legal-dot"></span>
+		<a href="/apps/kipi/legal/safety">Child Safety Policy</a>
 	</footer>
 </article>
 

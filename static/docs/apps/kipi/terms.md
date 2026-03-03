@@ -36,6 +36,7 @@ You agree not to post content that:
 - Is illegal, harmful, threatening, abusive, or harassing
 - Contains hate speech or promotes discrimination
 - Is sexually explicit or exploitative
+- Depicts, promotes, or facilitates child sexual abuse or exploitation (CSAE) — see our [Child Safety Policy](/apps/kipi/legal/safety) for details
 - Infringes on others' intellectual property or privacy rights
 - Contains spam, malware, or deceptive content
 - Impersonates another person or entity
