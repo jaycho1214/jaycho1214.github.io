@@ -20,22 +20,22 @@
 	href={url || undefined}
 	target={url?.startsWith('/') ? undefined : '_blank'}
 >
-	<div class="flex items-center gap-2 mb-1">
+	{#if date}
+		<p class="text-[10px] text-gray-400 mb-1">{date}</p>
+	{/if}
+	<div class="flex items-baseline gap-2 flex-wrap">
+		<h1 class="text-3xl font-light group-hover:text-gray-500 transition">
+			{name}
+		</h1>
 		{#each categories as category}
-			<span class="text-[10px] font-medium uppercase tracking-wider px-2 py-0.5 border border-gray-500 text-gray-300 group-hover:border-gray-600 group-hover:text-gray-500 transition">
+			<span
+				class="text-[8px] font-medium uppercase tracking-wider px-1.5 py-px border border-gray-500 text-gray-300 group-hover:border-gray-600 group-hover:text-gray-500 transition"
+			>
 				{category}
 			</span>
 		{/each}
 	</div>
-	<h1 class="text-3xl font-light group-hover:text-gray-500 transition">
-		{name}
-	</h1>
-	<div class="flex items-center gap-2">
-		<p class="text-xs text-gray-300 group-hover:text-gray-500 transition">
-			{description}
-		</p>
-		{#if date}
-			<span class="text-xs text-gray-400 whitespace-nowrap">{date}</span>
-		{/if}
-	</div>
+	<p class="text-xs text-gray-300 group-hover:text-gray-500 transition mt-1">
+		{description}
+	</p>
 </a>

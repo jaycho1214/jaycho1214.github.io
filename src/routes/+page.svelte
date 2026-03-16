@@ -71,35 +71,37 @@
 				</div>
 			</div>
 			<p class="text-sm text-gray-300 font-light">Software Engineer</p>
-			<p bind:this={heroEnd} class="text-sm font-light mt-6">I create things.</p>
+			<p bind:this={heroEnd} class="text-sm font-light mt-6">
+				I create things.
+			</p>
 		</div>
 		<div class="flex flex-col lg:flex-row gap-8 my-8">
 			<div class="border border-px border-gray-600 lg:flex-1">
 				<h1 class="absolute bg-black mx-3 -my-3 px-4 font-bold">Projects</h1>
 				<div class="flex flex-col gap-8 px-4 sm:px-8 py-12">
 					<ProjectCard
-						categories={["Web"]}
+						categories={['Web']}
 						url="https://shovel.one"
 						name="Shovel"
 						description="Create and manage fictional worlds through web novels."
 						date="Jul 2024 — Present"
 					/>
 					<ProjectCard
-						categories={["Web", "iOS", "Android"]}
+						categories={['Web', 'iOS', 'Android']}
 						url="https://selah.kr"
 						name="Selah"
 						description="A Bible social app for reading Scripture together and sharing reflections."
 						date="May 2025 — Present"
 					/>
 					<ProjectCard
-						categories={["iOS", "Android"]}
+						categories={['iOS', 'Android']}
 						url="/apps/kipi"
 						name="Kipi"
 						description="A social diary app for exchanging stories, whether as yourself or anonymously."
 						date="Dec 2025 — Present"
 					/>
 					<ProjectCard
-						categories={["Desktop"]}
+						categories={['Desktop']}
 						url="https://github.com/jaycho1214/openworship"
 						name="OpenWorship"
 						description="Free, open-source worship presentation software for churches."
@@ -111,55 +113,55 @@
 				<h1 class="absolute bg-black mx-3 -my-3 px-4 font-bold">Archive</h1>
 				<div class="flex flex-col gap-8 px-4 sm:px-8 py-12">
 					<ProjectCard
-						categories={["Web"]}
+						categories={['Web']}
 						url="https://github.com/jaycho1214/onlineutilities"
 						name="OnlineUtilities"
 						description="Simplify your day with powerful tools in a sleek design."
 						date="Sep 2024 — Sep 2025"
 					/>
 					<ProjectCard
-						categories={["iOS"]}
+						categories={['iOS']}
 						url="https://github.com/jaycho1214/chatapi-app"
 						name="ChatAPI"
 						description="Pay-as-you-go Mobile ChatGPT"
 						date="Sep 2024"
 					/>
 					<ProjectCard
-						categories={["visionOS"]}
+						categories={['visionOS']}
 						url="https://crosswand.com/app/bible"
 						name="Bible"
 						description="A Bible app with multiple translations on one screen, made for Apple Vision Pro."
 						date="May 2024"
 					/>
 					<ProjectCard
-						categories={["visionOS"]}
+						categories={['visionOS']}
 						url="https://crosswand.com/app/intime"
 						name="In Time"
 						description="A spatial time tracking tool designed for Apple Vision Pro."
 					/>
 					<ProjectCard
-						categories={["iOS", "Android"]}
+						categories={['iOS', 'Android']}
 						url="https://crosswand.com/app/prayer"
 						name="Prayer"
 						description="An open-source Christian community for sharing prayers and praying for others."
 						date="Nov 2023 — Aug 2024"
 					/>
 					<ProjectCard
-						categories={["Web"]}
+						categories={['Web']}
 						url="https://github.com/jaycho1214/DIV2CSU"
 						name="DIV2CSU"
 						description="An open-source platform for converting paper-based processes to electronic formats, tailored for military use."
 						date="Aug 2023 — Aug 2024"
 					/>
 					<ProjectCard
-						categories={["iOS", "Android"]}
+						categories={['iOS', 'Android']}
 						url="https://crosswand.com/app/reflection"
 						name="Reflection"
 						description="An app for saving your own motivational quotes."
 						date="Jul 2022 — Jul 2023"
 					/>
 					<ProjectCard
-						categories={["iOS", "Android"]}
+						categories={['iOS', 'Android']}
 						url="https://github.com/crosswandhq/motivelist"
 						name="MoLi"
 						description="A motive list app for collecting and organizing your inspirations."
