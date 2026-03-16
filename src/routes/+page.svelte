@@ -30,10 +30,10 @@
 	aria-hidden={!showHeader}
 >
 	<div class="header-blur absolute inset-0"></div>
-	<div class="relative h-full flex items-center gap-3 pl-14 pr-4">
+	<div class="relative h-full flex items-center gap-2 pl-12 pr-4">
 		<div class="overflow-hidden">
 			<p
-				class="text-white text-sm font-light transition-transform duration-300 ease-out"
+				class="text-white text-sm font-bold transition-transform duration-300 ease-out"
 				class:translate-y-0={showHeader}
 				class:translate-y-full={!showHeader}
 			>
@@ -183,8 +183,8 @@
 	}
 
 	.header-blur {
-		backdrop-filter: blur(16px) saturate(180%);
-		-webkit-backdrop-filter: blur(16px) saturate(180%);
-		background: rgba(0, 0, 0, 0.6);
+		backdrop-filter: blur(8px) saturate(180%);
+		-webkit-backdrop-filter: blur(8px) saturate(180%);
+		background: rgba(0, 0, 0, 0.3);
 	}
 </style>

@@ -6,7 +6,7 @@
 	class="menu-icon"
 	id="menu-icon"
 	class:open={expanded}
-	style="--size : 20px"
+	style="--size : 14px"
 >
 	<div class="menu-line line1"></div>
 	<div class="menu-line line2"></div>
@@ -35,11 +35,11 @@
 	}
 
 	.line1 {
-		top: calc(var(--size) * 0.33);
+		top: calc(var(--size) * 0.2);
 	}
 
 	.line2 {
-		top: calc(var(--size) * 0.66);
+		top: calc(var(--size) * 0.55);
 	}
 
 	.menu-icon.open .line1 {
