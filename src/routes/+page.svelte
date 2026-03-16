@@ -15,7 +15,7 @@
 			([entry]) => {
 				showHeader = !entry.isIntersecting;
 			},
-			{ threshold: 0 },
+			{ rootMargin: '-20px 0px 0px 0px', threshold: 0 },
 		);
 		observer.observe(heroEnd);
 		return () => observer.disconnect();
@@ -23,7 +23,7 @@
 </script>
 
 <div
-	class="fixed top-0 left-0 right-0 z-40 h-12 transition-opacity duration-300"
+	class="fixed top-0 left-0 right-0 z-40 h-12 transition-opacity duration-150"
 	class:opacity-100={showHeader}
 	class:opacity-0={!showHeader}
 	class:pointer-events-none={!showHeader}
@@ -33,7 +33,7 @@
 	<div class="relative h-full flex items-center gap-2 pl-12 pr-4">
 		<div class="overflow-hidden">
 			<p
-				class="text-white text-sm font-bold transition-transform duration-300 ease-out"
+				class="text-white text-sm font-bold transition-transform duration-150 ease-out"
 				class:translate-y-0={showHeader}
 				class:translate-y-full={!showHeader}
 			>
@@ -45,7 +45,7 @@
 			target="_blank"
 			aria-label="Visit my Github account"
 			tabindex={showHeader ? 0 : -1}
-			class="transition-all duration-300 ease-out"
+			class="transition-all duration-150 ease-out"
 			class:opacity-100={showHeader}
 			class:opacity-0={!showHeader}
 			class:translate-y-2={!showHeader}
@@ -59,7 +59,7 @@
 	<section class="flex flex-col pt-12 pb-20 text-white px-4 sm:px-6">
 		<div class="py-4 flex flex-col">
 			<div class="flex">
-				<h1 class="text-2xl font-light">Jaeyoung Cho</h1>
+				<h1 bind:this={heroEnd} class="text-2xl font-light">Jaeyoung Cho</h1>
 				<div class="flex flex-row items-center ml-4">
 					<a
 						href="https://github.com/jaycho1214"
@@ -71,7 +71,7 @@
 				</div>
 			</div>
 			<p class="text-sm text-gray-300 font-light">Software Engineer</p>
-			<p bind:this={heroEnd} class="text-sm font-light mt-6">
+			<p class="text-sm font-light mt-6">
 				I create things.
 			</p>
 		</div>
