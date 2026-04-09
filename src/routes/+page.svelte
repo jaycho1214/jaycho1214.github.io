@@ -94,6 +94,13 @@
 						date="May 2025 — Present"
 					/>
 					<ProjectCard
+						categories={['Web']}
+						url="https://usetools.app"
+						name="UseTiny"
+						description="A collection of lightweight productivity tools."
+						date="Nov 2025 — Present"
+					/>
+					<ProjectCard
 						categories={['iOS', 'Android']}
 						url="/apps/kipi"
 						name="Kipi"
