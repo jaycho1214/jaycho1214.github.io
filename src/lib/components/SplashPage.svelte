@@ -4,31 +4,21 @@
 
 	let showSplash: boolean | null = $state(false);
 	let doneAnimation = $state(false);
-	let text = $state('');
-	const targetText = 'Jaeyoung Cho';
-	function textAnimation(idx: number = 0) {
-		return new Promise<void>((resolve) => {
-			setTimeout(() => {
-				text += targetText[idx];
-				if (targetText[idx] === ' ') {
-					idx += 1;
-					text += targetText[idx];
-				}
-				if (idx < targetText.length - 1) {
-					textAnimation(idx + 1).then(resolve);
-				} else {
-					resolve();
-				}
-			}, 100);
-		});
+	let showName = $state(false);
+	let exit = $state(false);
+
+	function delay(ms: number) {
+		return new Promise((resolve) => setTimeout(resolve, ms));
 	}
 
 	onMount(async () => {
 		showSplash = sessionStorage.getItem('splashShown') === 'false';
 		if (!showSplash) {
-			await new Promise((resolve) => setTimeout(resolve, 100));
-			await textAnimation();
-			await new Promise((resolve) => setTimeout(resolve, 1000));
+			await delay(200);
+			showName = true;
+			await delay(1800);
+			exit = true;
+			await delay(800);
 			sessionStorage.setItem('splashShown', 'false');
 		}
 		doneAnimation = true;
@@ -51,12 +41,14 @@
 {#if showSplash === false}
 	<section
 		id="splash"
-		class="fixed inset-0 bg-black pointer-events-none cursor-default z-50"
-		class:slide-up={doneAnimation}
+		class="fixed inset-0 bg-black cursor-default z-50"
+		class:exit
+		class:pointer-events-none={doneAnimation}
 	>
 		<div class="flex w-full h-full justify-center items-center">
-			<p class="text-white text-2xl">{text}</p>
-			<p class="blink text-white text-2xl">_</p>
+			<h1 class="name text-white" class:name-show={showName}>
+				Jaeyoung Cho
+			</h1>
 		</div>
 	</section>
 {:else if showSplash === null}
@@ -68,28 +60,29 @@
 <style>
 	#splash {
 		z-index: 9999;
+		transition:
+			opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+			filter 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
-	.blink {
-		animation: blinker 1s linear infinite;
+	.name {
+		font-size: clamp(1.25rem, 3vw, 1.5rem);
+		font-weight: 500;
+		letter-spacing: 0;
+		opacity: 0;
+		filter: blur(12px);
+		transition:
+			opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+			filter 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
-	@keyframes blinker {
-		50% {
-			opacity: 0;
-		}
+	.name-show {
+		opacity: 1;
+		filter: blur(0px);
 	}
 
-	.slide-up {
-		animation: slideUp 1s forwards;
-	}
-
-	@keyframes slideUp {
-		from {
-			transform: translateY(0);
-		}
-		to {
-			transform: translateY(-100%);
-		}
+	.exit {
+		opacity: 0;
+		filter: blur(12px);
 	}
 </style>
