@@ -71,9 +71,7 @@
 				</div>
 			</div>
 			<p class="text-sm text-gray-300 font-light">Software Engineer</p>
-			<p class="text-sm font-light mt-6">
-				I create things.
-			</p>
+			<p class="text-sm font-light mt-6">I create things.</p>
 		</div>
 		<div class="flex flex-col lg:flex-row gap-8 my-8">
 			<div class="border border-px border-gray-600 lg:flex-1">

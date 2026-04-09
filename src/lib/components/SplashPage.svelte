@@ -46,9 +46,7 @@
 		class:pointer-events-none={doneAnimation}
 	>
 		<div class="flex w-full h-full justify-center items-center">
-			<h1 class="name text-white" class:name-show={showName}>
-				Jaeyoung Cho
-			</h1>
+			<h1 class="name text-white" class:name-show={showName}>Jaeyoung Cho</h1>
 		</div>
 	</section>
 {:else if showSplash === null}
