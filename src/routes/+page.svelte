@@ -93,7 +93,7 @@
 					/>
 					<ProjectCard
 						categories={['Web']}
-						url="https://usetools.app"
+						url="https://usetiny.app"
 						name="UseTiny"
 						description="A collection of lightweight productivity tools."
 						date="Nov 2025 — Present"
