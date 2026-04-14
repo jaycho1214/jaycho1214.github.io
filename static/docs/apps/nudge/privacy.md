@@ -8,15 +8,31 @@ Nudge ("we," "our," or "the app") is a contextual planning application developed
 
 ## Data Storage
 
-Nudge is a **local-first application**. All your data — plans, categories, triggers, saved locations, and preferences — is stored exclusively on your device using SQLite. We do not operate any cloud servers or databases.
+Nudge is a **local-first application**. Your plans, categories, triggers, saved locations, and preferences are stored on your device using SQLite. We do not operate our own cloud servers or databases for storing your content.
+
+## Information We Collect
+
+### Analytics (PostHog)
+
+We use PostHog to collect anonymous usage analytics, session replay data, and error reports. This helps us understand how the app is used and fix bugs. Data collected may include:
+
+- App usage events (e.g., features used, screens viewed)
+- Session replay data (UI interactions, not your plan content)
+- Error and crash reports
+- Device type, OS version, and app version
+
+This data is sent to PostHog's servers. It does not include your name, email address, or the content of your plans.
+
+### Purchase Validation (RevenueCat)
+
+We use RevenueCat to validate in-app purchases. When you make a purchase, RevenueCat processes anonymous device and transaction data to verify your purchase with Apple or Google. RevenueCat does not receive your name, email, or payment details.
 
 ## Information We Do Not Collect
 
-- We do not collect personal information
-- We do not track your location on our servers
-- We do not have access to your plans or notes
-- We do not use analytics or tracking services
-- We do not share any data with third parties
+- We do not collect your name, email address, or other personal identifiers
+- We do not have access to the content of your plans or notes
+- We do not track or transmit your location data — location processing happens entirely on your device
+- We do not sell any data to third parties
 
 ## Location Data
 
@@ -28,7 +44,15 @@ Nudge sends local notifications to surface your plans at configured times. These
 
 ## In-App Purchases
 
-Purchases are processed by Apple's App Store or Google Play Store. We never see or store your payment details. Purchase records are managed by the respective platform.
+Purchases are processed by Apple's App Store or Google Play Store. We never see or store your payment details. Purchase validation is handled by RevenueCat as described above.
+
+## Third-Party Services
+
+| Service | Purpose | Data Sent |
+|---------|---------|-----------|
+| PostHog | Analytics, session replay, error tracking | Anonymous usage events, device info |
+| RevenueCat | Purchase validation | Anonymous transaction and device data |
+| Apple App Store / Google Play | Payment processing | Managed by the platform |
 
 ## Children's Privacy
 
