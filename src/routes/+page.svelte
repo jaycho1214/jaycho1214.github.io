@@ -100,6 +100,13 @@
 					/>
 					<ProjectCard
 						categories={['iOS', 'Android']}
+						url="/apps/nudge"
+						name="Nudge"
+						description="A contextual planning app that surfaces your plans at the right time and place."
+						date="Apr 2026 — Present"
+					/>
+					<ProjectCard
+						categories={['iOS', 'Android']}
 						url="/apps/kipi"
 						name="Kipi"
 						description="A social diary app for exchanging stories, whether as yourself or anonymously."
