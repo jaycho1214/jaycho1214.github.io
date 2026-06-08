@@ -100,6 +100,13 @@
 					/>
 					<ProjectCard
 						categories={['iOS', 'Android']}
+						url="/apps/crescendo"
+						name="Crescendo"
+						description="A practice journal for musicians — record every take, study a reference, and prepare for the stage."
+						date="Jun 2026 — Present"
+					/>
+					<ProjectCard
+						categories={['iOS', 'Android']}
 						url="/apps/nudge"
 						name="Nudge"
 						description="A contextual planning app that surfaces your plans at the right time and place."

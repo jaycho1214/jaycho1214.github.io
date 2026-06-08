@@ -48,11 +48,11 @@ Purchases are processed by Apple's App Store or Google Play Store. We never see 
 
 ## Third-Party Services
 
-| Service | Purpose | Data Sent |
-|---------|---------|-----------|
-| PostHog | Analytics, session replay, error tracking | Anonymous usage events, device info |
-| RevenueCat | Purchase validation | Anonymous transaction and device data |
-| Apple App Store / Google Play | Payment processing | Managed by the platform |
+| Service                       | Purpose                                   | Data Sent                             |
+| ----------------------------- | ----------------------------------------- | ------------------------------------- |
+| PostHog                       | Analytics, session replay, error tracking | Anonymous usage events, device info   |
+| RevenueCat                    | Purchase validation                       | Anonymous transaction and device data |
+| Apple App Store / Google Play | Payment processing                        | Managed by the platform               |
 
 ## Children's Privacy
 
