@@ -108,6 +108,8 @@
 
 	<footer class="legal-footer">
 		<a href="/apps/crescendo/legal/privacy">Privacy Policy</a>
+		<span class="legal-sep">/</span>
+		<a href="/apps/crescendo/legal/terms">Terms of Service</a>
 	</footer>
 </article>
 
@@ -328,5 +330,12 @@
 		outline: 2px solid var(--accent);
 		outline-offset: 2px;
 		border-radius: 2px;
+	}
+
+	.legal-sep {
+		font-size: 0.75rem;
+		color: var(--ink-muted);
+		opacity: 0.4;
+		user-select: none;
 	}
 </style>
